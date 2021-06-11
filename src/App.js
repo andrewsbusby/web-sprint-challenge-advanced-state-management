@@ -9,14 +9,16 @@ import { fetchSmurfs } from "./actions";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
-import { props } from "bluebird";
+// import { props } from "bluebird";
 
 const App = (props) => {
 
  const { fetchSmurfs } = props;
 
-
-  render() {
+  useEffect(() => {
+    fetchSmurfs();
+  })
+  
     return (
       <div className="App">
         <Header />
@@ -28,7 +30,7 @@ const App = (props) => {
       </div>
     );
   }
-}
+
 
 export default connect(null, { fetchSmurfs }) (App);
 
