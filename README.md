@@ -167,6 +167,18 @@ Example of object created in Smurf DB:
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Add your answers to the questions within `interview_answers.md` file. These will not be counted as a part of your sprint score but will be helpful for preparing you for your endorsement interview, and enhancing overall understanding.
 
 1. What problem does the context API help solve?
-2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+  It solves having to send props to every component or child component that might need them. Helping to make the code less cumbersome. 
+2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux.
+  Actions: They carry information from your application to the store in the app.
+  Reducers:They recieve an action and update state depending on what action is in effect.
+  Store: Is where the state tree is stored for the app. 
+ What does each piece do?
+  The store is where state and information is stored for the app.
+  The actions move information around the app.
+  The reducer recieves the action and updates state and helps to re-render the page. 
+ Why is the store known as a 'single source of truth' in a redux application?
+  It contains all the state data in it. It is where you draw your state from and when ever an action and reducer are called and put into effect. 
 3. What does `redux-thunk` allow us to do? How does it change our `action-creators`?
+  It allows us to make API calls from our action-creators. It makes our action-creators asynchronous instead of synchronous. 
 4. What is your favorite state management system you've learned and this sprint? Please explain why!
+  I really like what we have learned this week with store. I like how you are able to store all of the state for the app in one spot. How you can connect all of it through the {connect} from react-redux.
