@@ -1,6 +1,4 @@
 
-export const initialState = {
-}
 
 export const initialState = {
     smurfs: [],
@@ -30,6 +28,9 @@ const reducer = (state = initialState, action)=>{
                 error: action.payload,
             }
         case ADD_SMURF:
+            const addSmurf = {
+                ...action.payload
+            }
             return{
                 ...state,
                 smurfs: [...state.smurfs, addSmurf],
